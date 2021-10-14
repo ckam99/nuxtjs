@@ -6,8 +6,7 @@ const { counter, increment, decrement } = useCounter({ initValue: 3, stepValue: 
 
 </script>
 <template>
-    <div class="container">
-        <img src="@/assets/img/nuxt.svg" />
+    <div>
         <h1>Wecome Nuxt {{ counter }}</h1>
         <div style="display: flex; justify-content: center;">
             <button @click="decrement">

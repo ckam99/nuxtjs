@@ -7,7 +7,7 @@ export default defineNuxtConfig({
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'Nuxt 3 is the best ' }
         ],
-        style: [
+        link: [
             { rel: "preconnect", href: "https://fonts.googleapis.com", crossorigin: true },
             { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: true },
             { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" }
@@ -15,5 +15,10 @@ export default defineNuxtConfig({
     },
     css: [
         '@/assets/css/app.css'
-    ]
+    ],
+    loadingIndicator: {
+        name: 'circle',
+        color: '#3B8070',
+        background: 'white'
+    }
 })
