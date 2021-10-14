@@ -3,7 +3,7 @@
 
 type Props = {
     name: string,
-    color?: string,
+    // color?: string,
     stroke?: string,
     fill?: string,
     width?: number,
@@ -13,7 +13,7 @@ type Props = {
 withDefaults(defineProps<Props>(), {
     stroke: 'currentColor',
     fill: 'none',
-    color: '#444',
+    // color: '#444',
     width: 24,
     height: 24
 })
@@ -27,7 +27,7 @@ withDefaults(defineProps<Props>(), {
 </template>
 
 <style scoped>
-svg {
+/* svg {
     color: v-bind(color);
-}
+} */
 </style>
