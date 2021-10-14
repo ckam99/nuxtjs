@@ -4,6 +4,7 @@
 </script>
 <template>
     <div class="container">
+        <img src="@/assets/img/nuxt.svg" />
         <h1>Wecome Nuxt 3</h1>
     </div>
 </template>
