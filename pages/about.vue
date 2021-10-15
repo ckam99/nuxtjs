@@ -1,7 +1,10 @@
-<script setup lang="ts">
+<script>
 export default {
     layout: false
 }
+</script>
+<script setup lang="ts">
+
 </script>
 <template>
     <NuxtLayout name="custom">
