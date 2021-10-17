@@ -1,5 +1,5 @@
 
-import { ref } from 'vue'
+import { useState } from '#app'
 
 type Props = {
     initValue: number,
@@ -7,7 +7,8 @@ type Props = {
 }
 
 export default function useCounter(options: Props = { initValue: 0, stepValue: 1 }) {
-    const counter = ref<number>(options.initValue)
+    const counter = useState<number>('counter', () => options.initValue)
+    // const counter = ref<number>(options.initValue)
 
     function increment() {
         counter.value += options.stepValue

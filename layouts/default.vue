@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import useCounter from '../composables/counter'
+
+const { counter } = useCounter()
+
+</script>
 <template>
     <div class="container">
         <nav>
@@ -7,6 +13,9 @@
             <span>|</span>
             <NuxtLink to="contact">Contact US</NuxtLink>
         </nav>
+
+        <div>Global counter: {{ counter }}</div>
+
         <img src="@/assets/img/nuxt.svg" />
         <slot />
     </div>
