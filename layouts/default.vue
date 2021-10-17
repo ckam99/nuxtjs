@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import { useCounterValue } from '../composables/counter'
+import useCounterStore from '@/store/counter'
 
-const counter = useCounterValue()
+const { counter } = useCounterStore()
+
 
 </script>
 <template>

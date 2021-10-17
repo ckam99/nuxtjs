@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import Icon from '@/components/Icon.vue'
-import useCounter from '~~/composables/counter';
+// import useCounter from '~~/composables/counter';
 
-const { counter, increment, decrement } = useCounter({ initValue: 3, stepValue: 1 })
+// const { counter, increment, decrement } = useCounter({ initValue: 3, stepValue: 1 })
+import useCounterStore from '@/store/counter'
+
+const { counter, increment, decrement } = useCounterStore('counter', { initValue: 3, stepValue: 1 })
 
 </script>
 <template>

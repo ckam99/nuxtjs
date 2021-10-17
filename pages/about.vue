@@ -2,7 +2,8 @@
 import TextField from '@/components/TextField.vue'
 
 export default {
-    layout: false
+    layout: false,
+    middleware: ['guard']
 }
 </script>
 <script setup lang="ts">
