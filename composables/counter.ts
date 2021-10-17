@@ -6,6 +6,8 @@ type Props = {
     stepValue: number
 }
 
+export const useCounterValue = () => useState('counter')
+
 export default function useCounter(options: Props = { initValue: 0, stepValue: 1 }) {
     const counter = useState<number>('counter', () => options.initValue)
     // const counter = ref<number>(options.initValue)
