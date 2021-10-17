@@ -6,17 +6,20 @@ export interface User {
     fullname?: string
 }
 
-const authUser = useState<User>('auth-user',
-    () => (localStorage.getItem('auth-user') || {}) as User
-)
-
 function authStore() {
+
+    const AUTH_TAG = 'auth-user'
+
+    const authUser = useState<User>(AUTH_TAG,
+        () => JSON.parse(localStorage.getItem(AUTH_TAG) || '{}') as User
+    )
 
     return {
         user: authUser,
         isAuthenticated: authUser.value != null,
         setLogged: (current: User) => {
             authUser.value = current
+            localStorage.setItem(AUTH_TAG, JSON.stringify(current))
         }
     }
 }

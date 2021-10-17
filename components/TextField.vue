@@ -11,3 +11,15 @@ function handleChange(e: Event) {
 <template>
     <input @input="handleChange" v-bind="$attrs" />
 </template>
+
+<style>
+.input {
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    outline: none;
+    border-radius: 5px;
+}
+.input:focus {
+    border-color: #00dc82;
+}
+</style>

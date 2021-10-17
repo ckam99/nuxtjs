@@ -1,11 +1,18 @@
 <script lang="ts" setup>
 import useCounterStore from '@/store/counter'
+import useAuthStore from '@/store/authenticate'
 
-const { counter } = useCounterStore()
+// const { counter } = useCounterStore()
+const { isAuthenticated, user } = useAuthStore()
 
 
 </script>
 <template>
+    <div v-if="isAuthenticated" class="l">
+        <div>{{ user.fullname }}</div>
+        <div>{{ user.email }}</div>
+        <NuxtLink to="logout">Logout</NuxtLink>
+    </div>
     <div class="container">
         <nav>
             <NuxtLink to="/">Home</NuxtLink>
@@ -15,7 +22,7 @@ const { counter } = useCounterStore()
             <NuxtLink to="contact">Contact US</NuxtLink>
         </nav>
 
-        <div>Global counter: {{ counter }}</div>
+        <!-- <div>Global counter: {{ counter }}</div> -->
 
         <img src="@/assets/img/nuxt.svg" />
         <slot />
@@ -58,5 +65,10 @@ button:hover {
 
 button:focus {
     opacity: 0.5;
+}
+.l {
+    width: 60%;
+    margin: 60px auto;
+    text-align: right;
 }
 </style>
