@@ -1,5 +1,5 @@
 <script lang="ts">
-
+import TextField from '@/components/TextField.vue'
 
 export default {
     layout: false
@@ -7,6 +7,10 @@ export default {
 </script>
 <script setup lang="ts">
 
+function handleChange(v: string) {
+    console.log(v);
+
+}
 </script>
 <template>
     <NuxtLayout name="custom">
@@ -16,6 +20,8 @@ export default {
             doloremque necessitatibus quo saepe,
             quis dolore reiciendis non obcaecati. Dolore, perferendis.
         </p>
+
+        <TextField @on-change="handleChange" />
     </NuxtLayout>
 </template>
 
